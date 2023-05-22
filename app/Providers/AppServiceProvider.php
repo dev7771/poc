@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(UserRepositoryInterface::class, UserEloquentRepository::class);
 
         $this->app->singleton(GeoLocationService::class, function ($app) {
-            $cityDatabaseFile = storage_path('app/GeoLite2-City.mmdb');
+            $cityDatabaseFile = storage_path('GeoLite2-City.mmdb');
             $reader = new Reader($cityDatabaseFile);
             return new GeoLocationService($reader);
         });

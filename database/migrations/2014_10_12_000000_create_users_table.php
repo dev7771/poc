@@ -19,7 +19,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('avatar')->nullable();
-            $table->bigInteger('google_id')->nullable();
+            $table->string('google_id')->nullable();
             $table->boolean('is_active')->default(false);
             $table->rememberToken();
             $table->timestamps();
